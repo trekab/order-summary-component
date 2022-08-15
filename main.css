@@ -21,6 +21,9 @@ body {
   align-items: center;
   height: 100vh;
   background-color: var(--pale-blue);
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .card {
@@ -31,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
 }
 
 .hero {
@@ -94,6 +98,10 @@ body {
   line-height: 17.2px;
 }
 
+.subscription a:hover {
+  text-decoration: none;
+}
+
 .card button {
   background-color: var(--bright-blue);
   border: none;
@@ -108,10 +116,70 @@ body {
   line-height: 19.85px;
 }
 
+.card button:hover {
+  cursor: pointer;
+  background-color: #766cf1;
+}
+
 .card .cancel {
   font-weight: 900;
   color: var(--desaturated-blue);
   text-decoration: none;
   font-size: 15px;
   line-height: 19.85px;
+}
+
+.cancel:hover {
+  color: var(--dark-blue);
+}
+
+@media (min-width: 576px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+
+  .card {
+    width: 450px;
+    height: 697px;
+  }
+
+  .hero {
+    height: 220px;
+  }
+
+  .card h1 {
+    font-size: 28px;
+    line-height: 37.04px;
+    margin-top: 45px;
+    margin-bottom: 17px;
+  }
+
+  .card-description {
+    font-size: 16px;
+    width: 354px;
+    line-height: 26px;
+  }
+
+  .subscription {
+    width: 354px;
+    padding: 25px 24px;
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+
+  .subscription-name,
+  .subscription-period {
+    font-size: 16px;
+    line-height: 21.17px;
+  }
+
+  .subscription a {
+    font-size: 14px;
+    line-height: 18.52px;
+  }
+
+  .card button {
+    width: 354px;
+    margin-bottom: 45px;
+  }
 }
